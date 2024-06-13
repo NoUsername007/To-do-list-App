@@ -11,8 +11,8 @@ submit_button.addEventListener("click", (e) => {
     let to_add = list_input.value
     if (to_add != "") {
         if (to_add.trim().length) {
-            list.innerHTML += `<div class="use_flex"><div><input type="checkbox" class="item" id="${id}">
-            <label for="${id}" class="label">${to_add}</label></div></div><br>`
+            list.innerHTML += `<input type="checkbox" class="item" id="${id}">
+            <label for="${id}" class="label">${to_add}</label><br>`
         }
     }
     localStorage.setItem("content", `${list.innerHTML}`);
