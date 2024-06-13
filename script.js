@@ -19,9 +19,6 @@ submit_button.addEventListener("click", (e) => {
     list_input.value = ""
     let items = document.querySelectorAll(".item")
     let labels = document.querySelectorAll(".label")
-    console.log(items)
-    console.log(labels)
-    console.log(id)
 })
 
 window.addEventListener("load", () => {
