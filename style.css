@@ -53,6 +53,10 @@ button {
     text-align: center;
 }
 
+input[type=checkbox]:checked+label {
+    text-decoration: line-through;
+}
+
 button:hover {
     cursor: pointer;
     background-color: hsl(221, 83%, 58%);
@@ -72,6 +76,7 @@ main {
     font-size: 20px;
     text-transform: capitalize;
     text-align: left;
+    /* padding: 10px; */
 }
 
 .list-container label {
@@ -96,3 +101,21 @@ footer {
     text-align: center;
     padding: 0.5em;
 }
+
+.cut {
+    text-decoration: line-through !important;
+}
+
+@media screen and (width < 426px) {
+    .list-container {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (width < 410px) {
+    #list_input {
+        width: 80%;
+    }
+}
+
