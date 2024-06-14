@@ -43,10 +43,16 @@ h1 {
 
 i {
     color: red;
+    padding: 4px;
 }
 
 i:hover {
     cursor: pointer;
+    background-color: red;
+    padding: 4px;
+    color: white;
+    border-radius: 4px;
+    transition: all 0.5s;
 }
 
 .use_flex {
@@ -89,12 +95,10 @@ main {
     font-size: 20px;
     text-transform: capitalize;
     text-align: left;
-    /* padding: 10px; */
 }
 
 .list-container label {
     font-family: Poppins, sans-serif;
-    /* font-family: 4rem; */
 }
 
 .center {
@@ -131,4 +135,3 @@ footer {
         width: 80%;
     }
 }
-
