@@ -12,6 +12,10 @@
     font-family: Poppins, sans-serif;
 }
 
+*:focus {
+    outline: 1px solid #2563eb;
+}
+
 html,
 body {
     height: 100%;
@@ -72,9 +76,7 @@ button {
     text-align: center;
 }
 
-input[type=checkbox]:checked+label {
-    text-decoration: line-through;
-}
+
 
 button:hover {
     cursor: pointer;
@@ -97,10 +99,6 @@ main {
     text-align: left;
 }
 
-.list-container label {
-    font-family: Poppins, sans-serif;
-}
-
 .center {
     display: flex;
     justify-content: center;
@@ -119,14 +117,8 @@ footer {
     padding: 0.5em;
 }
 
-.list_text {
+._items_ {
     flex: 1;
-    display: flex;
-    gap: 10px;
-}
-
-label {
-    /* flex: 1; */
 }
 
 ._items_ {
@@ -154,7 +146,8 @@ label {
 
 .checked._items_::before {
     content: "";
-    border: 2px solid #2563eb;
+    border: 2px solid #108EE8;
+    padding: 0;
     border-radius: 50%;
     height: 16px;
     width: 16px;
@@ -163,13 +156,9 @@ label {
     background-color: white;
     left: 12px;
     vertical-align: center;
-    background-image: url(./Eo_circle_light-blue_checkmark.svg.png);
+    background-image: url(./Check.webp);
     background-position: center;
     background-size: cover;
-}
-
-.cut {
-    text-decoration: line-through !important;
 }
 
 @media screen and (width < 426px) {

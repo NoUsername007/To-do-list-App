@@ -9,8 +9,7 @@ submit_button.addEventListener("click", (e) => {
     let to_add = list_input.value
     if (to_add != "") {
         if (to_add.trim().length) {
-            list.innerHTML += `<div class="use_flex"><div class="list_text"><input type="checkbox" class="item" id="${id}">
-            <label for="${id}" class="label">${to_add}</label></div><i class="ri-delete-bin-line"></i></div>`
+            list.innerHTML += `<div class= "use_flex"><p class="_items_">${to_add}</p> <i class="ri-delete-bin-line"></i></div>`
         }
     }
     localStorage.setItem("content", `${list.innerHTML}`);
@@ -31,18 +30,15 @@ list.addEventListener("click", (event) => {
     if (event.target.tagName === "I") {
         event.target.parentElement.remove()
     }
-    else if (event.target.tagName === "DIV" && event.target.classList.contains("list_text")) {
-        let toCheck = event.target.parentNode.childNodes[0].childNodes[0]
-        console.log(toCheck)
-        // if (toCheck.checked == true) {
-        //     toCheck.setAttribute('unchecked', true)
-        //     toCheck.click()
-        //     event.target.classList.toggle("cut")
-        // } else if (toCheck.checked == false) {
-        //     event.target.classList.toggle("cut")
-        //     toCheck.setAttribute('checked', true)
-        //     toCheck.click()
-        // }
-        event.target.classList.toggle("cut")
+    else if (event.target.tagName === "P" && event.target.classList.contains("_items_")) {
+        event.target.classList.toggle("checked")
     }
+    localStorage.setItem("content", `${list.innerHTML}`);
 })
+
+window.addEventListener("keypress", function (event) {
+    if (event.key === "Enter") {
+        event.preventDefault();
+        submit_button.click()
+    }
+});
